@@ -2054,7 +2054,7 @@ function openSettings(){
     var inner=fld('farm','Nome da propriedade',inp('farm',{value:c.farm,ph:'Ex.: Fazenda Boa Vista',attrs:'autocomplete="off" maxlength="60"'}))+
       '<div class="row2">'+fld('price','Cotação de referência da @ (R$)',dec('price',c.refPrice?String(c.refPrice).replace('.',','):'','Ex.: 330'),'Só para consulta, não entra nas contas. O preço de cada lote você digita na Viabilidade.')+fld('yield','Rendimento de carcaça (%)',dec('yield',String(c.yieldPct).replace('.',','),'Ex.: 52'),'Entre 40 e 60.')+'</div>';
     inner+='<div class="kv-h">Cópia dos dados</div><p class="hint">Exportar guarda um arquivo com todos os lotes, pesagens, custos e manejos. Importar junta o arquivo aos dados daqui: o que está no arquivo vale, e nada é apagado.</p>'+
-      '<div class="actions"><button type="button" class="btn" data-act="export-data">Exportar dados</button><label class="btn" for="imp-file">Importar dados</label><input id="imp-file" type="file" accept="application/json,.json" hidden></div>';
+      '<div class="actions"><button type="button" class="btn" data-act="export-data">Exportar dados</button><label class="btn" for="imp-file">Importar dados</label><input id="imp-file" type="file" hidden></div>';
     inner+='<div class="kv-h">Conta</div><div class="actions"><button type="button" class="btn" data-act="logout">Sair da conta</button></div>';
     return formShell('settings','',inner,'Salvar');
   }});
